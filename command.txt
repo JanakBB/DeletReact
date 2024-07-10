@@ -1,0 +1,5 @@
+npx create-react-app reactapp01
+
+vite
+npm create vite@latest
+project name: >> reactSelect a variant: >> JavaScript
