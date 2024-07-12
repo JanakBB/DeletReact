@@ -1,17 +1,22 @@
 import {useState} from "react";
+import { useEffect } from "react";
 
 function App() {
-  const [count, setCount] = useState(0)
-  const incrementCount = () => {
-    setCount(count + 1);
-  };
+  const [count, setCount] = useState(0);
+  function loadData() {
+    console.log("Data Loaded...");
+  }
 
-  return (
+  useEffect(() => {
+    loadData()
+  }, [count]);
+
+  return(
     <>
       <h1>{count}</h1>
-      <button onClick={incrementCount}>Increment</button>
+      <button onClick={() => setCount(count + 1)}>Load Data</button>
     </>
-);
+  )
 }
 
 export default App
