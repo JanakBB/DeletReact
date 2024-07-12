@@ -1,15 +1,15 @@
-import Header from "./components/Header";
+import {useState} from "react";
 
 function App() {
+  const [count, setCount] = useState(0)
+  const incrementCount = () => {
+    setCount(count + 1);
+  };
 
   return (
     <>
-    <Header username="Janak Bohara" age="32" />
-    <Header username="Gita Thakurathi" age="27"/>
-
-   <h1>Vite React App</h1>
-   <p>This is a react app</p>
-
+      <h1>{count}</h1>
+      <button onClick={incrementCount}>Increment</button>
     </>
 );
 }
